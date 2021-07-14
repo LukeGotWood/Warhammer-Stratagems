@@ -7,14 +7,17 @@ import NECRON_STRATAGEMS from "./stratagems/Necrons.json";
 import BLOOD_ANGEL_STRATAGEMS from "./stratagems/Blood-Angels.json";
 
 function App() {
-  const [faction, setFaction] = useState(NECRON_STRATAGEMS);
+  const [faction, setFaction] = useState({
+    name: "Necron",
+    stratagems: NECRON_STRATAGEMS,
+  });
 
   const BATTLE_PHASES = [
     {
       id: "b1",
       name: "Before Battle",
       type: "gray",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Before battle")
       ),
     },
@@ -22,7 +25,7 @@ function App() {
       id: "b2",
       name: "During Deployment",
       type: "gray",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("During deployment")
       ),
     },
@@ -30,7 +33,7 @@ function App() {
       id: "b3",
       name: "Command Phase",
       type: "green",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Command phase")
       ),
     },
@@ -38,7 +41,7 @@ function App() {
       id: "b4",
       name: "Movement Phase",
       type: "green",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Movement phase")
       ),
     },
@@ -46,7 +49,7 @@ function App() {
       id: "b5",
       name: "Enemy Movement Phase",
       type: "red",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Enemy Movement phase")
       ),
     },
@@ -54,7 +57,7 @@ function App() {
       id: "b6",
       name: "Enemy Psychic Phase",
       type: "red",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Enemy Psychic phase")
       ),
     },
@@ -62,7 +65,7 @@ function App() {
       id: "b7",
       name: "Shooting Phase",
       type: "green",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Shooting phase")
       ),
     },
@@ -70,7 +73,7 @@ function App() {
       id: "b8",
       name: "Enemy Shooting Phase",
       type: "red",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Enemy Shooting phase")
       ),
     },
@@ -78,7 +81,7 @@ function App() {
       id: "b9",
       name: "Enemy Charge Phase",
       type: "red",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Enemy Charge phase")
       ),
     },
@@ -86,7 +89,7 @@ function App() {
       id: "b10",
       name: "Fight Phase",
       type: "green",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Fight phase")
       ),
     },
@@ -94,7 +97,7 @@ function App() {
       id: "b11",
       name: "Enemy Fight Phase",
       type: "red",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Enemy Fight phase")
       ),
     },
@@ -102,7 +105,7 @@ function App() {
       id: "b12",
       name: "Taking Casualties",
       type: "green",
-      stratagems: faction.filter((stratagem) =>
+      stratagems: faction.stratagems.filter((stratagem) =>
         stratagem.phase.includes("Taking casualties")
       ),
     },
@@ -111,10 +114,10 @@ function App() {
   function factionSelectionHandler(faction) {
     switch (faction) {
       case "Blood Angels":
-        setFaction(BLOOD_ANGEL_STRATAGEMS);
+        setFaction({ name: "Blood Angel", stratagems: BLOOD_ANGEL_STRATAGEMS });
         break;
       default:
-        setFaction(NECRON_STRATAGEMS);
+        setFaction({ name: "Necron", stratagems: NECRON_STRATAGEMS });
         break;
     }
   }
@@ -122,7 +125,7 @@ function App() {
   return (
     <React.Fragment>
       <Navbar onFactionSelection={factionSelectionHandler} />
-      <h1 className="text-white">Necron Stratagems</h1>
+      <h1 className="text-white">{faction.name} Stratagems</h1>
       <hr className="mt-0 mb-1" style={{ color: "white" }} />
       {BATTLE_PHASES.map((phase) => {
         if (phase.stratagems.length > 0) {
