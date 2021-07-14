@@ -3,7 +3,7 @@ function StratagemSpan(props) {
     <p>
       {props.name}{" "}
       <i>
-        ({props.dynasty} - {props.source})
+        ({props.source} - {props.type})
       </i>
     </p>
   );

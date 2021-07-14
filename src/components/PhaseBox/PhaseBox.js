@@ -1,4 +1,4 @@
-import StratagemSpan from "../../StratagemSpan/StratagemSpan";
+import StratagemSpan from "../StratagemSpan/StratagemSpan";
 
 function PhaseBox(props) {
   let bgColor;
@@ -25,8 +25,8 @@ function PhaseBox(props) {
           <StratagemSpan
             key={stratagem.id}
             name={stratagem.name}
-            dynasty={stratagem.dynasty}
             source={stratagem.source}
+            type={stratagem.type}
           />
         );
       })}
