@@ -17,7 +17,9 @@ function PhaseBox(props) {
   }
 
   return (
-    <div className={`mx-3 my-2 p-1 ${bgColor} border border-2 border-dark text-white`}>
+    <div
+      className={`mx-3 my-2 p-1 ${bgColor} border border-2 border-dark text-white`}
+    >
       <h3 className="mb-0">{props.phase}</h3>
       <hr className="mt-0 mb-1" />
       {props.stratagems.map((stratagem) => {

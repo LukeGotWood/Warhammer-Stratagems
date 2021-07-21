@@ -98,12 +98,16 @@ async function main() {
     };
   });
 
-  fs.writeFile("./Stratagems/Necrons.json", JSON.stringify(data), function (err, data) {
-    if (err) {
-      return console.log(err);
+  fs.writeFile(
+    "./Stratagems/Necrons.json",
+    JSON.stringify(data),
+    function (err, data) {
+      if (err) {
+        return console.log(err);
+      }
+      console.log(data);
     }
-    console.log(data);
-  });
+  );
 }
 
 try {
