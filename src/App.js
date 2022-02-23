@@ -5,7 +5,7 @@ import PhaseBox from "./components/PhaseBox/PhaseBox";
 
 import NECRON_STRATAGEMS from "./stratagems/Necrons.json";
 import BLOOD_ANGEL_STRATAGEMS from "./stratagems/Blood-Angels.json";
-import ModalComp from "./components/ModalComp/ModalComp";
+// import ModalComp from "./components/ModalComp/ModalComp";
 
 function App() {
   const [faction, setFaction] = useState({
@@ -125,7 +125,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <ModalComp />
+      {/* <ModalComp /> */}
       <NavbarComp onFactionSelection={factionSelectionHandler} />
       <h1 className="text-white">{faction.name} Stratagems</h1>
       <hr className="mt-0 mb-1" style={{ color: "white" }} />
