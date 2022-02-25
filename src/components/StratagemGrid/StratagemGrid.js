@@ -3,8 +3,9 @@ import StratagemCard from "../StratagemCard/StratagemCard";
 import styles from "./StratagemGrid.module.css";
 
 function StratagemGrid(props) {
-    return (
-    <section className={styles["cards"]}>
+  return (
+    <main className={styles["content"]}>
+      <section className={styles["cards"]}>
         {props.stratagems.map((stratagem) => {
           return (
             <StratagemCard
@@ -16,8 +17,9 @@ function StratagemGrid(props) {
             />
           );
         })}
-    </section>
-    );
+      </section>
+    </main>
+  );
 }
 
 export default StratagemGrid;

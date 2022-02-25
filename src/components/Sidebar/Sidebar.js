@@ -6,7 +6,7 @@ function Sidebar(props) {
       {props.factions.map((faction) => {
         return (
           <div key={faction.id} className={styles["link"]}>
-            <div className={styles["text"]}>{faction.name}</div>
+            <button className={styles["btn"]}>{faction.name}</button>
           </div>
         );
       })}

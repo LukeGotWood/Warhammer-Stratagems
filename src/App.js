@@ -13,9 +13,7 @@ function App() {
     <React.Fragment>
       <div className="container">
         <Sidebar factions={Factions} />
-        <main className="content">
-          <StratagemGrid stratagems={Stratagems} />
-        </main>
+        <StratagemGrid stratagems={Stratagems} />
       </div>
     </React.Fragment>
   );
