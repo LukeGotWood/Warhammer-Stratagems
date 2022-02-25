@@ -1,0 +1,32 @@
+.card {
+    padding: .5rem;
+    background: linear-gradient(315deg, transparent 8px, #e6e8db 0);
+  }
+
+.card-header {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 100%;
+    background: linear-gradient(315deg, transparent 8px, #294a67 0);
+    padding: 0 8px 0 4px;
+    color: #ffffff;
+}
+
+.card-name {
+    display: inline;
+    float: left;
+    text-align: left;
+    width: 80%;
+}
+
+.card-cp {
+    display: inline;
+    float: right;
+    text-align: right;
+    width: 20%;
+}
+
+.card-body {
+    color: #000000;
+}
