@@ -1,146 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 
-import NavbarComp from "./components/NavbarComp/NavbarComp";
-import PhaseBox from "./components/PhaseBox/PhaseBox";
+import Stratagems from "./data/Stratagems.json";
 
-import NECRON_STRATAGEMS from "./stratagems/Necrons.json";
-import BLOOD_ANGEL_STRATAGEMS from "./stratagems/Blood-Angels.json";
+import "./App.css";
 
 function App() {
-  const [faction, setFaction] = useState({
-    name: "Necron",
-    stratagems: NECRON_STRATAGEMS,
-  });
-
-  const BATTLE_PHASES = [
-    {
-      id: "b1",
-      name: "Before Battle",
-      type: "gray",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Before battle")
-      ),
-    },
-    {
-      id: "b2",
-      name: "During Deployment",
-      type: "gray",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("During deployment")
-      ),
-    },
-    {
-      id: "b3",
-      name: "Command Phase",
-      type: "green",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Command phase")
-      ),
-    },
-    {
-      id: "b4",
-      name: "Movement Phase",
-      type: "green",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Movement phase")
-      ),
-    },
-    {
-      id: "b5",
-      name: "Enemy Movement Phase",
-      type: "red",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Enemy Movement phase")
-      ),
-    },
-    {
-      id: "b6",
-      name: "Enemy Psychic Phase",
-      type: "red",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Enemy Psychic phase")
-      ),
-    },
-    {
-      id: "b7",
-      name: "Shooting Phase",
-      type: "green",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Shooting phase")
-      ),
-    },
-    {
-      id: "b8",
-      name: "Enemy Shooting Phase",
-      type: "red",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Enemy Shooting phase")
-      ),
-    },
-    {
-      id: "b9",
-      name: "Enemy Charge Phase",
-      type: "red",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Enemy Charge phase")
-      ),
-    },
-    {
-      id: "b10",
-      name: "Fight Phase",
-      type: "green",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Fight phase")
-      ),
-    },
-    {
-      id: "b11",
-      name: "Enemy Fight Phase",
-      type: "red",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Enemy Fight phase")
-      ),
-    },
-    {
-      id: "b12",
-      name: "Taking Casualties",
-      type: "green",
-      stratagems: faction.stratagems.filter((stratagem) =>
-        stratagem.phase.includes("Taking casualties")
-      ),
-    },
-  ];
-
-  function factionSelectionHandler(faction) {
-    switch (faction) {
-      case "Blood Angels":
-        setFaction({ name: "Blood Angel", stratagems: BLOOD_ANGEL_STRATAGEMS });
-        break;
-      default:
-        setFaction({ name: "Necron", stratagems: NECRON_STRATAGEMS });
-        break;
-    }
-  }
-
   return (
     <React.Fragment>
-      <NavbarComp onFactionSelection={factionSelectionHandler} />
-      <h1 className="text-white">{faction.name} Stratagems</h1>
-      <hr className="mt-0 mb-1" style={{ color: "white" }} />
-      {BATTLE_PHASES.map((phase) => {
-        if (phase.stratagems.length > 0) {
+      <section className="cards">
+        {Stratagems.map((stratagem) => {
           return (
-            <PhaseBox
-              key={phase.id}
-              type={phase.type}
-              phase={phase.name}
-              stratagems={phase.stratagems}
-            />
+            <article className="card" key={stratagem.id}>
+              <p className="card-header">
+                <span className="card-name">{stratagem.name}</span>
+                <span className="card-cp">{stratagem.cp_cost}CP</span>
+              </p>
+              <div className="card-body">
+              <p>{stratagem.type}</p>
+              <p>{stratagem.description}</p>
+              </div>
+            </article>
           );
-        } else {
-          return null;
-        }
-      })}
+        })}
+      </section>
     </React.Fragment>
   );
 }
