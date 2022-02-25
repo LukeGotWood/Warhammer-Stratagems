@@ -3,7 +3,7 @@
     background: linear-gradient(315deg, transparent 8px, #e6e8db 0);
   }
 
-.card-header {
+.header {
     display: block;
     float: left;
     margin: 0;
@@ -13,20 +13,24 @@
     color: #ffffff;
 }
 
-.card-name {
+.name {
     display: inline;
     float: left;
     text-align: left;
     width: 80%;
 }
 
-.card-cp {
+.cp {
     display: inline;
     float: right;
     text-align: right;
     width: 20%;
 }
 
-.card-body {
+.body {
     color: #000000;
+}
+
+.divider {
+    margin-bottom: .25rem;
 }
