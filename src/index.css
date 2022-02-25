@@ -9,10 +9,11 @@ html {
 }
 
 body {
-  background-color: #333333 !important;
+  background-color: #333333;
+  overflow: hidden;
+  height: 100vh;
 }
 
 #root {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
 }
