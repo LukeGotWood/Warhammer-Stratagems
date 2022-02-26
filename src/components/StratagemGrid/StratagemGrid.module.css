@@ -1,8 +1,13 @@
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, min(calc(100% - 2rem), 460px));
-    grid-auto-rows: auto;
-    gap: 1rem;
-    margin: 1rem;
-    justify-content: center;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min(calc(100% - 2rem), 460px));
+  grid-auto-rows: auto;
+  gap: 1rem;
+  margin: 1rem;
+  justify-content: center;
+}
+
+.content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
