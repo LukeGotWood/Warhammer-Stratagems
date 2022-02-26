@@ -1,10 +1,18 @@
+import { useEffect, useRef } from "react";
+
 import StratagemCard from "../StratagemCard/StratagemCard";
 
 import styles from "./StratagemGrid.module.css";
 
 function StratagemGrid(props) {
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    contentRef.current.scrollTop = 0;
+  });
+
   return (
-    <main className={styles["content"]}>
+    <main ref={contentRef} className={styles["content"]}>
       <section className={styles["cards"]}>
         {props.stratagems.map((stratagem) => {
           return (
