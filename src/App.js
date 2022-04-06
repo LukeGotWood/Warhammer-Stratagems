@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import StratagemGrid from "./components/StratagemGrid/StratagemGrid";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Navbar from "./components/Navbar/Navbar";
 
 import Stratagems from "./data/Stratagems.json";
 import Factions from "./data/Factions.json";
@@ -25,7 +26,8 @@ function App() {
 
   return (
     <React.Fragment>
-      <div className="container">
+      <Navbar />
+      <div className="wrapper">
         <Sidebar
           factions={Factions}
           onClick={filterStratagems}
