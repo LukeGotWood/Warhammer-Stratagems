@@ -1,0 +1,6 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  height: inherit;
+  padding-top: 3rem;
+}

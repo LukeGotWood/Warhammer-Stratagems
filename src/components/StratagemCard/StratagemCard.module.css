@@ -1,0 +1,36 @@
+.card {
+    padding: .5rem;
+    background: linear-gradient(315deg, transparent 8px, #e6e8db 0);
+  }
+
+.header {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 100%;
+    background: linear-gradient(315deg, transparent 8px, #294a67 0);
+    padding: 0 8px 0 4px;
+    color: #ffffff;
+}
+
+.name {
+    display: inline;
+    float: left;
+    text-align: left;
+    width: 80%;
+}
+
+.cp {
+    display: inline;
+    float: right;
+    text-align: right;
+    width: 20%;
+}
+
+.body {
+    color: #000000;
+}
+
+.divider {
+    margin-bottom: .25rem;
+}

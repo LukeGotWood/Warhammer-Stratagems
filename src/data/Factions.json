@@ -1,0 +1,118 @@
+[
+    {
+        "id": "AC",
+        "name": "Adeptus Custodes"
+    },
+    {
+        "id": "AdM",
+        "name": "Adeptus Mechanicus"
+    },
+    {
+        "id": "AM",
+        "name": "Astra Militarum"
+    },
+    {
+        "id": "AS",
+        "name": "Adepta Sororitas"
+    },
+    {
+        "id": "CA",
+        "name": "Astra Cartographica"
+    },
+    {
+        "id": "CD",
+        "name": "Chaos Daemons"
+    },
+    {
+        "id": "CSM",
+        "name": "Chaos Space Marines"
+    },
+    {
+        "id": "CW",
+        "name": "Craftworlds"
+    },
+    {
+        "id": "DG",
+        "name": "Death Guard"
+    },
+    {
+        "id": "DRU",
+        "name": "Drukhari"
+    },
+    {
+        "id": "GC",
+        "name": "Genestealer Cults"
+    },
+    {
+        "id": "GK",
+        "name": "Grey Knights"
+    },
+    {
+        "id": "HAR",
+        "name": "Harlequins"
+    },
+    {
+        "id": "HTL",
+        "name": "Heretic Titan Legions"
+    },
+    {
+        "id": "INQ",
+        "name": "Inquisition"
+    },
+    {
+        "id": "NEC",
+        "name": "Necrons"
+    },
+    {
+        "id": "OA",
+        "name": "Officio Assassinorum"
+    },
+    {
+        "id": "ORK",
+        "name": "Orks"
+    },
+    {
+        "id": "QI",
+        "name": "Imperial Knights"
+    },
+    {
+        "id": "QT",
+        "name": "Chaos Knights"
+    },
+    {
+        "id": "RaH",
+        "name": "Renegades and Heretics"
+    },
+    {
+        "id": "RT",
+        "name": "Rogue Traders"
+    },
+    {
+        "id": "SM",
+        "name": "Space Marines"
+    },
+    {
+        "id": "TAU",
+        "name": "T’au Empire"
+    },
+    {
+        "id": "TL",
+        "name": "Titan Legions"
+    },
+    {
+        "id": "TS",
+        "name": "Thousand Sons"
+    },
+    {
+        "id": "TYR",
+        "name": "Tyranids"
+    },
+    {
+        "id": "UN",
+        "name": "Unaligned"
+    },
+    {
+        "id": "YNN",
+        "name": "Ynnari"
+    }
+]
